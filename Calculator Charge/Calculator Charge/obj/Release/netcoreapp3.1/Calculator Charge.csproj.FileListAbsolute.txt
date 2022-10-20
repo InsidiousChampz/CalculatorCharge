@@ -1,0 +1,14 @@
+D:\Calculator Charge\Calculator Charge\Calculator Charge\bin\Release\netcoreapp3.1\Calculator Charge.exe
+D:\Calculator Charge\Calculator Charge\Calculator Charge\bin\Release\netcoreapp3.1\Calculator Charge.deps.json
+D:\Calculator Charge\Calculator Charge\Calculator Charge\bin\Release\netcoreapp3.1\Calculator Charge.runtimeconfig.json
+D:\Calculator Charge\Calculator Charge\Calculator Charge\bin\Release\netcoreapp3.1\Calculator Charge.runtimeconfig.dev.json
+D:\Calculator Charge\Calculator Charge\Calculator Charge\bin\Release\netcoreapp3.1\Calculator Charge.dll
+D:\Calculator Charge\Calculator Charge\Calculator Charge\bin\Release\netcoreapp3.1\Calculator Charge.pdb
+D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Release\netcoreapp3.1\Calculator Charge.csproj.AssemblyReference.cache
+D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Release\netcoreapp3.1\Calculator Charge.GeneratedMSBuildEditorConfig.editorconfig
+D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Release\netcoreapp3.1\Calculator Charge.AssemblyInfoInputs.cache
+D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Release\netcoreapp3.1\Calculator Charge.AssemblyInfo.cs
+D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Release\netcoreapp3.1\Calculator Charge.csproj.CoreCompileInputs.cache
+D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Release\netcoreapp3.1\Calculator Charge.dll
+D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Release\netcoreapp3.1\Calculator Charge.pdb
+D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Release\netcoreapp3.1\Calculator Charge.genruntimeconfig.cache

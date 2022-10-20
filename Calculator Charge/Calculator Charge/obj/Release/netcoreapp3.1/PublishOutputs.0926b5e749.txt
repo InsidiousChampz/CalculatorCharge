@@ -1,0 +1,5 @@
+D:\CalculatorCharge\Calculator Charge.exe
+D:\CalculatorCharge\Calculator Charge.dll
+D:\CalculatorCharge\Calculator Charge.deps.json
+D:\CalculatorCharge\Calculator Charge.runtimeconfig.json
+D:\CalculatorCharge\Calculator Charge.pdb
