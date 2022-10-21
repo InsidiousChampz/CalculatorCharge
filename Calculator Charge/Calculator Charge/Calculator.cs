@@ -116,32 +116,51 @@ namespace Calculator_Charge
             // Calc more than ten.
             string ret = "";
 
-            int num1 = GetChargeValuePerDigit(inputChargeValue, 0);
-            int num2 = GetChargeValuePerDigit(inputChargeValue, 1);
-
-
-            if (CheckThreeValue(num2))
+            if (inputChargeValue.ToString().Length > 2)
             {
-                ret = num1 + " " + GetThreeValue(num2);
+                ret = "No Need to Calculate ... Please Exit.";
             }
             else
             {
-                if (num1 == 0)
+                int num1 = GetChargeValuePerDigit(inputChargeValue, 0);
+                int num2 = GetChargeValuePerDigit(inputChargeValue, 1);
+
+
+                if (CheckThreeValue(num2))
                 {
-                    ret = TEXTCANNOTCHARGE;
+                    ret = num1 + " " + GetThreeValue(num2);
                 }
                 else
                 {
-                    int retValue = 0;
-                    while (retValue == 0)
+                    if (num1 == 0)
                     {
-                        num1 = num1 - 1;
-                        num2 = num2 + 10;
-                        retValue = GetThreeValue(num2);
-                        ret = num1 + " " + retValue;
+                        ret = TEXTCANNOTCHARGE;
+                    }
+                    else
+                    {
+                        int retValue = 0;
+                        while (retValue == 0)
+                        {
+                            num1 = num1 - 1;
+                            num2 = num2 + 10;
+
+                            if (num1 == -1)
+                            {
+                                ret = TEXTCANNOTCHARGE;
+                                break;
+                            }
+                            else
+                            {
+                                retValue = GetThreeValue(num2);
+                                ret = num1 + " " + retValue;
+                            }
+
+                        }
                     }
                 }
             }
+
+            
 
             return ret;
         }

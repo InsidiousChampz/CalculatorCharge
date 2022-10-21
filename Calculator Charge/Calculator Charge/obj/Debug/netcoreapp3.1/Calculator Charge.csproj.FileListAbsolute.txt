@@ -12,3 +12,17 @@ D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1
 D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.dll
 D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.pdb
 D:\Calculator Charge\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.genruntimeconfig.cache
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\bin\Debug\netcoreapp3.1\Calculator Charge.exe
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\bin\Debug\netcoreapp3.1\Calculator Charge.deps.json
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\bin\Debug\netcoreapp3.1\Calculator Charge.runtimeconfig.json
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\bin\Debug\netcoreapp3.1\Calculator Charge.runtimeconfig.dev.json
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\bin\Debug\netcoreapp3.1\Calculator Charge.dll
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\bin\Debug\netcoreapp3.1\Calculator Charge.pdb
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.csproj.AssemblyReference.cache
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.AssemblyInfoInputs.cache
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.AssemblyInfo.cs
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.csproj.CoreCompileInputs.cache
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.dll
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.pdb
+D:\Work\CalculatorCode\Calculator Charge\Calculator Charge\obj\Debug\netcoreapp3.1\Calculator Charge.genruntimeconfig.cache
