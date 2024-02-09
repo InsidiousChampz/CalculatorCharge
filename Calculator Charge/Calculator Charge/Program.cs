@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using static Calculator_Charge.Calculator;
 
 namespace Calculator_Charge
@@ -20,6 +21,7 @@ namespace Calculator_Charge
         {
             try
             {
+               
                 bool endApp = false;
                 // Display title.
                 Console.WriteLine(TEXTHEADER);
@@ -40,10 +42,14 @@ namespace Calculator_Charge
                     }
                     else
                     {
-                        // calculation.
-                        retValue = CalculationCharge(Convert.ToInt32(inputChargeValue));
-                        // show result.
-                        Console.WriteLine(retValue);
+                        if (!String.IsNullOrEmpty(inputChargeValue))
+                        {
+							// calculation.
+							retValue = CalculationCharge(Convert.ToInt32(inputChargeValue)).Result;
+							// show result.
+							Console.WriteLine(retValue);
+						}
+                       
                     }
                 }
 
@@ -57,7 +63,7 @@ namespace Calculator_Charge
             }
 
         }
-        private static string CalculationCharge(decimal inputChargeValue)
+        private static async Task<string> CalculationCharge(decimal inputChargeValue)
         {
             string ret;
 
@@ -67,7 +73,7 @@ namespace Calculator_Charge
             }
             else
             {
-                ret = CalculationChargeValue(inputChargeValue);
+                ret = await CalculationChargeValue(inputChargeValue);
             }
 
             return TEXTRESULT + ret;

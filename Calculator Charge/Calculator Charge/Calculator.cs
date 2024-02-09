@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Calculator_Charge
 {
@@ -8,14 +9,15 @@ namespace Calculator_Charge
     {
         #region "Variable"
         private const string TEXTCANNOTCHARGE = "Cannot Change";
-        #endregion
+		private const string TEXTEXIT = "No need to calculate ... Please press n for exit.";
+		#endregion
 
-        #region "Method"
-        // - Method
-        public static string CalculationChargeValue(decimal inputChargeValue)
+		#region "Method"
+		// - Method
+		public static async Task<string> CalculationChargeValue(decimal inputChargeValue)
         {
 
-            string ret = "";
+            string ret = string.Empty;
 
             // Check Digit Input
             int lengthInput = inputChargeValue.ToString().Length;
@@ -23,20 +25,20 @@ namespace Calculator_Charge
             if (lengthInput == 1)
             {
                 // 1, 2, 3, ..9
-                ret = GetValueOneToNine(inputChargeValue);
+                ret = await GetValueOneToNine(inputChargeValue);
             }
             else
             {
                 // Calc 10 - ..N
-                if (CheckTenOnly(inputChargeValue))
+                if (await CheckTenOnly(inputChargeValue))
                 {
                     // just 10, 20, 30, ....
-                    ret = GetValueTenOnly(inputChargeValue);
+                    ret = await GetValueTenOnly(inputChargeValue);
                 }
                 else
                 {
                     // > 10
-                    ret = GetValueCalculation(inputChargeValue);
+                    ret = await GetValueCalculation(inputChargeValue);
                 }
             }
 
@@ -46,9 +48,10 @@ namespace Calculator_Charge
 
         // - Function
         #region "Function"
-        private static bool CheckTenOnly(decimal inputChargeValue)
+        private static async Task<bool> CheckTenOnly(decimal inputChargeValue)
         {
-            bool ret = false;
+			await Task.Delay(0);
+			bool ret = false;
             decimal calcFullTen = Decimal.Divide(inputChargeValue, 10);
             int isFullTen = calcFullTen.ToString().IndexOf(".");
             if (isFullTen == -1)
@@ -58,15 +61,17 @@ namespace Calculator_Charge
 
             return ret;
         }
-        private static string GetValueTenOnly(decimal inputChargeValue)
+        private static async Task<string> GetValueTenOnly(decimal inputChargeValue)
         {
+            await Task.Delay(0);
             decimal calcFullTen = Decimal.Divide(inputChargeValue, 10);
             return Convert.ToInt32(calcFullTen) + " 0";
         }
-        private static string GetValueOneToNine(decimal inputChargeValue)
+        private static async Task<string> GetValueOneToNine(decimal inputChargeValue)
         {
-            // Calc 1 - 9
-            string ret;
+			// Calc 1 - 9
+			await Task.Delay(0);
+			string ret;
             decimal calcThreeValue = Decimal.Divide(inputChargeValue, 3);
             int isThreeDecimal = calcThreeValue.ToString().IndexOf(".");
             if (isThreeDecimal == -1)
@@ -80,13 +85,15 @@ namespace Calculator_Charge
 
             return ret;
         }
-        private static int GetChargeValuePerDigit(decimal inputChargeValue, int position)
+        private static async Task<int> GetChargeValuePerDigit(decimal inputChargeValue, int position)
         {
-            return Convert.ToInt32(inputChargeValue.ToString().Substring(position, 1));
+			await Task.Delay(0);
+			return Convert.ToInt32(inputChargeValue.ToString().Substring(position, 1));
         }
-        private static bool CheckThreeValue(int num)
+        private static async Task<bool> CheckThreeValue(int num)
         {
-            bool ret = false;
+			await Task.Delay(0);
+			bool ret = false;
             decimal dNum = Decimal.Divide(num, 3);
             int isDecimal = dNum.ToString().IndexOf(".");
 
@@ -97,9 +104,10 @@ namespace Calculator_Charge
 
             return ret;
         }
-        private static int GetThreeValue(int num)
+        private static async Task<int> GetThreeValue(int num)
         {
-            int ret = 0;
+			await Task.Delay(0);
+			int ret = 0;
             decimal dNum = Decimal.Divide(num, 3);
             int isDecimal = dNum.ToString().IndexOf(".");
 
@@ -110,23 +118,22 @@ namespace Calculator_Charge
 
             return ret;
         }
-
-        private static string GetValueCalculation(decimal inputChargeValue)
+        private static async Task<string> GetValueCalculation(decimal inputChargeValue)
         {
             // Calc more than ten.
             string ret = "";
 
             if (inputChargeValue.ToString().Length > 2)
             {
-                ret = "No Need to Calculate ... Please Exit.";
+                ret = TEXTEXIT;
             }
             else
             {
-                int num1 = GetChargeValuePerDigit(inputChargeValue, 0);
-                int num2 = GetChargeValuePerDigit(inputChargeValue, 1);
+                int num1 = await GetChargeValuePerDigit(inputChargeValue, 0);
+                int num2 = await GetChargeValuePerDigit(inputChargeValue, 1);
 
 
-                if (CheckThreeValue(num2))
+                if (await CheckThreeValue(num2))
                 {
                     ret = num1 + " " + GetThreeValue(num2);
                 }
@@ -151,7 +158,7 @@ namespace Calculator_Charge
                             }
                             else
                             {
-                                retValue = GetThreeValue(num2);
+                                retValue = await GetThreeValue(num2);
                                 ret = num1 + " " + retValue;
                             }
 
@@ -164,16 +171,16 @@ namespace Calculator_Charge
 
             return ret;
         }
-        private static string GetValueCalculation_Backup(decimal inputChargeValue)
+        private static async Task<string> GetValueCalculation_Backup(decimal inputChargeValue)
         {
             // Calc more than ten.
             string ret = "";
 
-            int num1 = GetChargeValuePerDigit(inputChargeValue, 0);
-            int num2 = GetChargeValuePerDigit(inputChargeValue, 1);
+            int num1 = await GetChargeValuePerDigit(inputChargeValue, 0);
+            int num2 = await GetChargeValuePerDigit(inputChargeValue, 1);
 
 
-            if (CheckThreeValue(num2))
+            if (await CheckThreeValue(num2))
             {
                 ret = num1 + " " + GetThreeValue(num2);
             }
@@ -184,7 +191,7 @@ namespace Calculator_Charge
 
                 if (num1 == 0)
                 {
-                    if (CheckThreeValue(num2))
+                    if (await CheckThreeValue(num2))
                     {
                         ret = num1 + " " + GetThreeValue(num2);
                     }
@@ -197,13 +204,13 @@ namespace Calculator_Charge
                 {
                     if (num1 == 0)
                     {
-                        if (CheckThreeValue(Convert.ToInt32(inputChargeValue)))
+                        if (await CheckThreeValue(Convert.ToInt32(inputChargeValue)))
                         {
                             ret = "0 " + GetThreeValue(Convert.ToInt32(inputChargeValue));
                         }
                         else
                         {
-                            if (CheckThreeValue(num2))
+                            if (await CheckThreeValue(num2))
                             {
                                 ret = num1 + " " + GetThreeValue(num2);
                             }
@@ -211,7 +218,7 @@ namespace Calculator_Charge
                             {
                                 num1 = num1 - 1;
                                 num2 = num2 + 10;
-                                if (CheckThreeValue(num2))
+                                if (await CheckThreeValue(num2))
                                 {
                                     ret = num1 + " " + GetThreeValue(num2);
                                 }
@@ -221,7 +228,7 @@ namespace Calculator_Charge
                     else
                     {
 
-                        if (CheckThreeValue(num2))
+                        if (await CheckThreeValue(num2))
                         {
                             ret = num1 + " " + GetThreeValue(num2);
                         }
@@ -238,7 +245,7 @@ namespace Calculator_Charge
                                 num1 = num1 - 1;
                                 num2 = num2 + 10;
 
-                                if (CheckThreeValue(num2))
+                                if (await CheckThreeValue(num2))
                                 {
                                     ret = num1 + " " + GetThreeValue(num2);
                                 }

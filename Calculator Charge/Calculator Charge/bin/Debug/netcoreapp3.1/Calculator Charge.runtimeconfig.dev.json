@@ -1,9 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Cenob\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Cenob\\.nuget\\packages",
-      "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\Insidious\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Insidious\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ]
   }
 }

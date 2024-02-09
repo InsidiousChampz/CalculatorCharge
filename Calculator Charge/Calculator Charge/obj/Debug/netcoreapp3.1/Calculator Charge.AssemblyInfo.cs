@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Calculator Charge")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e694531f57c90a28f326645db7ba46fb0034ada7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Calculator Charge")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Calculator Charge")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
